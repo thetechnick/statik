@@ -237,6 +237,7 @@ func generateSource(srcPath string, includes string) (file *os.File, err error) 
 			// Do NOT use fHeader.Modified as it only works on go >= 1.10
 			fHeader.SetModTime(mtimeDate)
 		}
+		fHeader.SetMode(0)
 		fHeader.Name = filepath.ToSlash(relPath)
 		if !*flagNoCompress {
 			fHeader.Method = zip.Deflate
