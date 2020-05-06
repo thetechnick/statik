@@ -10,7 +10,7 @@ Is this a crazy idea? No, not necessarily. If you're building a tool that has a 
 
 Install the command line tool first.
 
-	go get github.com/rakyll/statik
+	go get github.com/thetechnick/statik
 
 statik is a tiny program that reads a directory and generates a source file that contains its contents. The generated source file registers the directory contents to be used by statik file system.
 
@@ -26,7 +26,7 @@ In your program, all your need to do is to import the generated package, initial
 
 ~~~ go
 import (
-  "github.com/rakyll/statik/fs"
+  "github.com/thetechnick/statik/fs"
 
   _ "./statik" // TODO: Replace with the absolute import path
 )
@@ -49,7 +49,7 @@ You can also read the content of a single file:
 
 ~~~ go
 import (
-  "github.com/rakyll/statik/fs"
+  "github.com/thetechnick/statik/fs"
 
   _ "./statik" // TODO: Replace with the absolute import path
 )
@@ -75,7 +75,7 @@ import (
   fmt.Println(string(contents))
 ~~~
 
-There is also a working example under [example](https://github.com/rakyll/statik/tree/master/example) directory, follow the instructions to build and run it.
+There is also a working example under [example](https://github.com/thetechnick/statik/tree/master/example) directory, follow the instructions to build and run it.
 
 Note: The idea and the implementation are hijacked from [camlistore](http://camlistore.org/). I decided to decouple it from its codebase due to the fact I'm actively in need of a similar solution for many of my projects.
 
